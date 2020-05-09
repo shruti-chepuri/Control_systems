@@ -4,7 +4,7 @@
 
 \item An op amp having a low-frequency gain of $10^{3}$ and a single-pole rolloff at $10^{4}$ rad/s is connected in a negative feedback loop via a feedback network having a transmission k and a two-pole rolloff at $10^{4}$ rad/s. Find the value of k above which the closed-loop amplifier becomes unstable.
 
-\\
+
 \solution 
 \begin{figure}[!ht]
 	\begin{center}
@@ -86,7 +86,8 @@ Hence, the value of k above which the system becomes unstable is 0.008.
 \end{figure} \\
 Now, 
 \begin{align}
-G(s)&= \frac{10^3}{1+\frac{s}{10^4}}
+V_i=V_{in}-V_f\\
+G(s)=\frac{V_0}{V_i}= \frac{10^3}{1+\frac{s}{10^4}}
 \end{align}
 This is of the form $10^3 \left(\frac{R}{R+sL}\right)$.
 This can be realized using the circuit:
@@ -116,6 +117,7 @@ Consider the feedback factor, H \newline
 \end{figure} \\
 Now, 
 \begin{align}
+H&=\frac{V_f}{V_0}\\
 H(s)&= \frac{k}{\left(1+\frac{s}{10^4}\right)^2} = k\left({\frac{1}{1+\frac{2s}{10^4}+\frac{s^2}{10^8}}}\right)  
 \end{align}
 This is of the form,
@@ -141,7 +143,7 @@ L_2&=1 \mu F
 The final circuit would be,
 \begin{figure}[!ht]
 	\begin{center}
-		\resizebox{500}{150}{\input{./figs/ee18btech11006/ee18btech11006_6.tex}}
+		\resizebox{2\columnwidth}{!}{\input{./figs/ee18btech11006/ee18btech11006_6.tex}}
 	\end{center}
 \caption{}
 \label{fig:ee18btech11006_6}
