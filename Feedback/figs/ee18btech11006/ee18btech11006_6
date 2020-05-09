@@ -3,8 +3,14 @@
 \draw 
 (0, 0) node[op amp] (opamp) {}
 (opamp.-) -- (-2.5,0.35)  to (-4.5, 0.35) node[ground]{}
-(opamp.out) to (1.5,0) node at (2,0.2){$V_f\left(-\right)$} to (2,0);
-\draw -- (0.5,-1)node at (0.5,-1.2){$V_{in}$} to (2,-1)node at (2,-1.2){$\left(+\right)$} ;
+(opamp.out) to (1.5,0) node at (2.7,0.2){$\left(-\right)$} to [R=$R_f$](2.1,0) to(2.5,0)
+node at (1.3,-0.4) {$-$}
+node at (1.7,-0.4) {$V_f$}
+node at (2.1,-0.4) {$+$}
+node at (2.7,-0.5){$V_i$};
+\draw -- (2.1,-1) to [V](2.1,-2.4)node[ground]{} 
+node at (1.5,-1.7){$V_s$};
+\draw node at (2.7,-1){$\left(+\right)$};
 \draw 
 (7,-0.5) node[op amp] (opamp_1) {}
 (opamp.+) -- (-0.6,-0.35) to[L =$L_1$,*-*] (-2.6,-0.35)to[R=$R_1$](-4.5,-0.35)
@@ -12,9 +18,9 @@
 (opamp.center) node[]{k}
 (opamp_1.-)-- (6,-0.15) to (5.7,-0.15) node[ground]{}
 (opamp_1.+) to [R=$R_2$](6.2,-2.4) node[ground]{}
-(opamp_1.+) to [L](3.5,-0.8) node at (5,-0.5){$L_2$} to [V=$\left(V_{in}-V_f\right)$](3.5,-2.4) node[ground]{}
+(opamp_1.+) to [L](3.5,-0.8) node at (5,-0.5){$L_2$} to [V=$V_i$](3.5,-2.4) node[ground]{}
 (opamp_1.center) node[]{$10^3$}
 (opamp_1.out) to (8,-0.5) node at (8.25,-0.8){$V_0$};
 \draw (opamp_1.out) -- (7.9,-4) -- (-4.5,-4) -- (-4.5,-0.35);
-\draw[dashed] (1,1) -- (1,-3) -- (7.7,-3) -- (7.7,1) -- (1,1);
+\draw[dashed] (2.3,1) -- (2.3,-3) -- (7.7,-3) -- (7.7,1) -- (2.3,1);
 \end{circuitikz}
