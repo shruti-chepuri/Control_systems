@@ -157,7 +157,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\textbf{Definition}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\textbf{For given question}}
+	{\gnumericPB{\centering}\textbf{For given case}}
 
 	
 \\
@@ -178,7 +178,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}H}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}{$\frac{k}{\left({1+\frac{s}{10^4}} \right)^2}$}}
+	{\gnumericPB{\centering}{$\frac{k}{\left({1+\frac{s}{10^4}} \right)^2} $}}
 
 \\
 \hhline{|---|}
@@ -187,8 +187,16 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}GH}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}{$ {k\left(\frac{10}{1+\frac{s}{10^4}}\right)}^3$}}
+	{\gnumericPB{\centering}{$\frac{10^3 k}{(1+\frac{s}{10^4})^3}$}}
 
+\\
+\hhline{|---|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}Transfer Function}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}{$\frac{G}{1+GH}$}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}{$\frac{\frac{10^3}{1+\frac{s}{10^4}}}{1+\frac{1}{\left(1+\frac{s}{10^4}\right)^3}}$}}
 \\
 \hhline{|-|-|-|}
 \end{tabular}
