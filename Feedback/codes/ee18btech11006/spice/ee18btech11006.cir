@@ -10,6 +10,7 @@ R3 N002 0 1
 L2 V0 N002 0.000001
 R4 V0 0 100
 .dc V1 0 10 1
+.control
 run
 wrdata ee18btech11006.dat V(V0)
 .endc
