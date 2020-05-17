@@ -12,18 +12,15 @@ import shlex
 s1 = signal.lti([10**7,2*(10**(11)),10**(15)], [1, 3*(10**4),3*(10**8),2*(10**(12))])
 w, mag, phase = signal.bode(s1)
 
-plt.subplots_adjust(hspace=0.5)
 plt.subplot(2,1,1)
 plt.semilogx(w, mag)    # Bode magnitude plot
 plt.xlabel('Freq')
 plt.ylabel('Magnitude')
-plt.title('Magnitude Bode plot')
 
 plt.subplot(2,1,2)
 plt.semilogx(w, phase)  # Bode phase plot
 plt.xlabel('Freq')
 plt.ylabel('Phase')
-plt.title('Phase Bode plot')
 
 #if using termux
 plt.savefig('./figs/ee18btech11006/ee18btech11006_7.pdf')
